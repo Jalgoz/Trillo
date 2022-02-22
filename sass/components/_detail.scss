@@ -56,7 +56,7 @@
     }
 
     &__friends{
-
+        display: flex;
     }
 
     &__photo {
@@ -67,7 +67,7 @@
         border: 3px solid white;
 
         &:not(:last-child) {
-            margin-right: -1.5rem;
+            margin-right: -2rem;
         }
     }
 }
@@ -82,6 +82,11 @@
     margin-bottom: 3.5rem;
     position: relative;
     overflow: hidden;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
 
     &__text {
         margin-bottom: 2.2rem;
