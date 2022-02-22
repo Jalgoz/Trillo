@@ -4,6 +4,11 @@
 .logo {
     height: 3.25rem;
     margin-left: 2rem;
+
+    @media only screen and (max-width: $bp-small) {
+        height: 2.75rem;
+        margin-left: 1.5rem;
+    }
  }
 
 ////////////////////////////////////////////
@@ -15,6 +20,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+        order: 1;
+        flex: 1 0 100%;
+        background-color: var(--color-grey-light-2);
+    }
 
     &__input {
         font-family: inherit;
@@ -28,6 +39,12 @@
         transition: all .3s;
         margin-right: -3rem;
 
+        @media only screen and (max-width: $bp-small) {
+            width: 92%;
+            margin-right: 0;
+            color: black;
+        }
+
         &:focus {
             outline: none;
             width: 100%;
@@ -37,6 +54,10 @@
         &::-webkit-input-placeholder {
             font-weight: 100;
             color: var(--color-grey-light-4);
+
+            @media only screen and (max-width: $bp-small) {
+                color: var(--color-grey-dark-2);
+            }
         }
     }
 
@@ -62,6 +83,11 @@
         height: 2rem;
         width: 2rem;
         fill: var(--color-grey-dark-3);
+
+        @media only screen and (max-width: $bp-small) {
+            margin-left: -4rem;
+            margin-top: 2px;
+        }
     }
 }
 
@@ -80,6 +106,10 @@
         transition: all .3s;
         display: flex;
         align-items: center;
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 0 1.5rem;
+        }
     }
 
     & > *:hover {
@@ -94,6 +124,11 @@
         height: 2.25rem;
         width: 2.25rem;
         fill: var(--color-grey-dark-2);
+
+        @media only screen and (max-width: $bp-small) {
+            height: 2rem;
+            width: 2rem;  
+        }
     }
 
     &__notification {

@@ -6,10 +6,18 @@
         padding: 2.5rem 0;
     }
 
+    @media only screen and (max-width: $bp-small) {
+        padding: 2rem 1rem;
+    }
+
     &__book-now {
         font-size: 1.7rem;
         text-transform: uppercase;
         font-weight: 300;
         margin-bottom: 2.5rem;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.5rem;
+        }
     }
 }
