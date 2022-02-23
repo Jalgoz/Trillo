@@ -1,0 +1,117 @@
+.notification,
+.menu {
+    position: absolute;
+    background-color: white;
+    height: 0;
+    overflow: hidden;
+    border-radius: 5px;
+    transform: translateY(20rem);
+    transition: transform .2s;
+
+    li {
+        list-style: none;
+
+        &:not(:last-child) {
+            padding-bottom: 0.7rem;
+            border-bottom: 1px solid var(--color-grey-light-4);
+        }
+
+        &:not(:first-child) {
+            padding-top: 0.7rem;
+        }
+    }
+}
+
+.notification {
+    width: 32rem;
+    left: -5rem;
+
+    @media only screen and (max-width:$bp-large) {
+        left: -25rem;
+    }
+
+    @media only screen and (max-width:$bp-small) {
+        left: -17.5rem;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__item {
+        padding: 1rem;
+
+        &:hover .message {
+            color: var(--color-grey-dark-1);
+        }
+
+        &:hover .message-name {
+            color: var(--color-primary);
+            border-bottom: 1px solid currentColor;
+        }
+
+        &:last-child {
+            text-align: center;
+            font-size: 1.1rem !important;
+        }
+    }
+}
+
+.menu { 
+    text-align: center;
+    width: 17rem;
+    left: -5rem;
+
+    @media only screen and (max-width:$bp-large) {
+        left: -7rem;
+    }
+
+    li {
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    color: var(--color-grey-dark-3);
+    transition: all .2s;
+
+    &--info {
+        display: flex;
+        margin-right: auto;
+        align-items: center;
+    }
+
+    &-box {
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    &-name {
+        font-size: 1.2rem;
+        display: flex;
+        border-bottom: 1px solid white;
+        transition: all .2s;
+    }
+
+    &-text {
+        font-size: .9rem;
+    }
+
+    &--date {
+        font-size: .9rem;
+    }
+
+    &__photo {
+        height: 3.5rem;
+        width: 3.5rem;
+        border-radius: 100%;
+    }
+}

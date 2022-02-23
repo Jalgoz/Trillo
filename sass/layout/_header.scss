@@ -125,11 +125,6 @@
         height: 2.25rem;
         width: 2.25rem;
         fill: var(--color-grey-dark-2);
-
-        @media only screen and (max-width: $bp-small) {
-            height: 2rem;
-            width: 2rem;  
-        }
     }
 
     &__notification {
@@ -156,49 +151,18 @@
     // Aumentado
     &__user,
     &__icon-box {
-        &:hover .user-nav__menu {
+        &:hover .menu {
             transform: translateY(13.5rem);
             border: 1px solid var(--color-grey-dark-2);
             height: auto;
-            width: 17rem;
-        }
-    }
-
-    &__user {
-        &:hover .user-nav__menu {
             padding: 1.5rem;
         }
-    }
 
-    &__menu {
-        position: absolute;
-        left: -5rem;
-        background-color: white;
-        height: 0;
-        overflow: hidden;
-        border-radius: 5px;
-        transform: translateY(-8rem);
-        transition: transform .1s;
-
-        li {
-            list-style: none;
-
-            &:not(:last-child) {
-                padding-bottom: 0.7rem;
-                border-bottom: 1px solid var(--color-grey-light-4);
-            }
-
-            &:not(:first-child) {
-                padding-top: 0.7rem;
-            }
-
-            &:hover {
-                color: var(--color-primary);
-            }
+        &:hover .notification {
+            transform: translateY(15rem);
+            border: 1px solid var(--color-grey-dark-2);
+            height: auto;
         }
     }
-
-    &__menu { 
-        text-align: center;
-    }
 }
+

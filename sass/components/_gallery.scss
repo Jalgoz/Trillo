@@ -1,8 +1,42 @@
 .gallery {
     display: flex;
 
+    &__item {
+        position: relative;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        &:hover .gallery__photo {
+            filter: blur(1px) brightness(40%);
+            transform: scale(1);
+        }
+
+        &:hover .gallery__description {
+            transform: translateY(0%);
+
+            @media only screen and (max-width: $bp-medium) {
+                transform: translateY(500%);
+            }
+        }
+    }
+
     &__photo {
         width: 100%;
         display: block;
+        transform: scale(1.1);
+        transition: all .3s;
+    }
+
+    &__description {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        position: absolute;
+        color: var(--color-grey-light-4);
+        transform: translateY(500%);
+        transition: transform .3s;
     }
 }
